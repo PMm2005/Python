@@ -6,6 +6,7 @@ def countdown(number):
 
 print(countdown(5))
 
+
 def first_plus_length(lst):
     return lst[0] + len[lst]
 my_list =[1 ,2 ,3 ,4 ,5]
