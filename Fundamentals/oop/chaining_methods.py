@@ -14,21 +14,19 @@ class user:
         print("Age: ",self.age)
         print("reward member: ",self.is_rewards_member)
         print("gold card points: ",self.gold_card_points)
+        return self
     
     def enroll(self):
         self.is_rewards_member = True
         self.gold_card_points = 200
+        return self
 
     def spend_points(self, amount):
         self.gold_card_points = self.gold_card_points - amount
+        return self
     
 ahmed = user("ahmed","amri","ml12@gmail.com",19)
 amine = user("amine", "amri","ljlkj@gmail.com",22)
-ahmed.display_info()
-ahmed.enroll()
-ahmed.display_info()
-ahmed.spend_points(50)
-ahmed.display_info()
-amine.enroll()
-amine.spend_points(80)
-amine.display_info()
+
+ahmed.display_info().enroll().spend_points(50).display_info()
+amine.enroll().spend_points(80).display_info()
