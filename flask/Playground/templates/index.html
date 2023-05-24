@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playground 1</title>
+    <title>Playground 2</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Welcome!</h1>
@@ -17,34 +18,20 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: center;
     }
     .box {
         width: 250px;
         height: 250px;
-        background-color: cyan;
+        background-color: {{color}};
         margin: 10px;
         border: solid;
         border-radius: 10%;
     }
     </style>
     <div class="boxes">
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-    </div>
-
-    <div class="boxes">
         {% for i in range(count) %}
             <div class="box"></div>
         {% endfor %}
     </div>
-
-    <div class="boxes" style="color:{{text_color}}">{{textx_color}}
-        {% for _ in range(count) %}
-        <div class="box"></div>
-        {% endfor %}
-    </div>
-
 </body>
 </html>
